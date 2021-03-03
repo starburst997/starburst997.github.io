@@ -5,4 +5,4 @@ permalink: /about/
 order: 9
 ---
 
-Not much yet, in the mean time visit [FailSafe Games](https://www.failsafegames.com)
+Self-taught programmer currently having fun with Unity and Haxe, hopefully I'll be able to get my hands on Jai eventually!
