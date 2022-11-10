@@ -33,10 +33,10 @@ Not an exhaustive list, some projects I worked on got cancelled, others I can't 
 
 - [FailSafe Games](https://failsafegames.com), a company I co-founded. Mostly web developments and flash games, you can still play them by visiting the [web site](https://failsafegames.com) (Windows / Mac / Linux version available)!
 
-<center class="images">
-<a href="https://www.youtube.com/user/failsafegames/featured" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/failsafe.svg" alt="FailSafe Games Logo" height="150"/></a>&nbsp;&nbsp;
-<a href="https://www.failsafegames.com/play_sh.html" target="_blank"><img src="https://www.failsafegames.com/images/game_siftheads.jpg" alt="Siftheads Street Wars" width="230"/></a>&nbsp;&nbsp;
-<a href="https://www.failsafegames.com/play_terminal.html" target="_blank"><img src="https://www.failsafegames.com/images/game_terminal.jpg" alt="The Terminal" width="230"/></a>&nbsp;&nbsp;
+<center class="images works">
+<a href="https://www.youtube.com/user/failsafegames/featured" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/failsafe.svg" alt="FailSafe Games Logo" height="150"/></a>
+<a href="https://www.failsafegames.com/play_sh.html" target="_blank"><img src="https://www.failsafegames.com/images/game_siftheads.jpg" alt="Siftheads Street Wars" width="230"/></a>
+<a href="https://www.failsafegames.com/play_terminal.html" target="_blank"><img src="https://www.failsafegames.com/images/game_terminal.jpg" alt="The Terminal" width="230"/></a>
 <a href="https://www.failsafegames.com/play_bobsicle.html" target="_blank"><img src="https://www.failsafegames.com/images/game_bobsicle.jpg" alt="The Terminal" width="230"/></a><br/><br/>
 </center>
 

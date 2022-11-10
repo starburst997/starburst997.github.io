@@ -19,3 +19,4 @@ Don't hesitate to contact me for any freelance / consulting work you might have;
 
 <br/>
 <center><img src="https://cdn.notessimo.com/misc/blog/profile.jfif" width="200" style="border-radius: 50%;" /></center>
+<br/>

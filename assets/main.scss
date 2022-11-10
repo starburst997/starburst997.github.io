@@ -3,6 +3,14 @@
 
 @import "minima";
 
+.page-content {
+    //padding-bottom: 0px;
+}
+
+.post-content {
+    margin-bottom: 0px;
+}
+
 .site-header {
     height: 54px;
     min-height: 54px;
@@ -39,6 +47,23 @@
 
     img {
         object-fit: contain;
+    }
+
+    &.works {
+        > a {
+            margin: 0px 6px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &.works {
+            flex-wrap: wrap;
+
+            img {
+                width: 150px;
+                height: 100px;
+            }
+        }
     }
 }
 

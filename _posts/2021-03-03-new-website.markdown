@@ -14,9 +14,9 @@ Still a lot of work to do but hopefully this should provide solid foundation mov
 
 Feel free to leave comments on the new [community website](https://community.notessimo.net) and if you have any ideas to improve the experience let me know!
 
-Enjoy this [awesome song](https://notessimo.net/s/5Et6LoXxFi) by [CyanSMP64](https://notessimo.net/u/Wikkid_Vommit)!
+Enjoy this [awesome song](https://notessimo.net/s/SxTzDtBTWk) by [Antonim](https://notessimo.net/u/Ace1257)!
 
-<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/LgzixW-kiJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/N1bT17uXezA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <br/>
 <div id='discourse-comments'></div>
