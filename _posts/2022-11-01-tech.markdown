@@ -31,7 +31,7 @@ V2 introduced the website ([php](https://en.wikipedia.org/wiki/PHP)) and forum (
 <br/>
 #### Revival (2020 Pandemic - Present)
 
-I was pretty under-stimulated at my current job at the time and decided to start out a [Mod Tracker](https://en.wikipedia.org/wiki/Music_tracker) player in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) as a fun side-project at home to improve my `unsafe` / low-level / optimization skill in C#. With the news that [Flash was going to die](https://www.adobe.com/ca/products/flashplayer/end-of-life.html), I felt pretty bad that soon all the (70k+) songs in the database were going to become unplayable and be forever lost. I then repurpose my library to also support the Notessimo file format with a focus on fast dynamic music synthesis usuable for video games. 
+I was pretty under-stimulated at my current job at the time and decided to start out a [Mod Tracker](https://en.wikipedia.org/wiki/Music_tracker) player in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) as a fun side-project at home to improve my `unsafe` / low-level / optimization skill in C#. With the news that [Flash was going to die](https://www.adobe.com/ca/products/flashplayer/end-of-life.html), I felt pretty bad that soon all the (70k+) songs in the database were going to become unplayable and be forever lost. I then repurpose my library to also support the Notessimo file format with a focus on fast dynamic music synthesis usable for video games. 
 
 <center class="images">
 <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/csharp.png" alt="C# Logo" height="85"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
