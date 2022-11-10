@@ -21,6 +21,7 @@ You can now see the difference with the new video exporter by comparing an [uplo
 
 <center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/Uw8V9jDDsF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+<br/>
 <div id='discourse-comments'></div>
 
 <script type="text/javascript">

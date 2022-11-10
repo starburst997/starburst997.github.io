@@ -20,6 +20,7 @@ Check it out as well in the [composer](https://notessimo.net/s/iSn7l12ReH) to pl
 
 <center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/fR5tk7uIiQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+<br/>
 <div id='discourse-comments'></div>
 
 <script type="text/javascript">
