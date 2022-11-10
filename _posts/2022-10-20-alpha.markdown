@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Early Access (Alpha) to V4 available"
+date:   2022-10-20 10:56:00 -0400
+categories: post
+---
+
+The early access to the alpha is now available! Everybody can download the app (open testing) on [iOS](https://testflight.apple.com/join/e9rpQsKx) / [Android](https://play.google.com/store/apps/details?id=com.failsafegames.tracker) / [Windows](https://cdn2.notessimo.com/release/notessimo/Windows/Notessimo.application) / [Mac](https://testflight.apple.com/join/e9rpQsKx) or [Web](https://notessimo.net) with *Read Only* access.
+
+[Patreon](https://www.patreon.com/notessimo) user have instant access to *Edit Mode* which allow them to create and edit songs. When the app will release, a free-tier will be available and *Edit Mode* will be available to all. No ETA yet but I do aim for a 2023 full-release.
+
+Makes sure to browse the [latest songs](https://notessimo.net/t/songs/all/latest) a bunch of them were made using the alpha!
+
+<center class="images">
+<a href="https://cdn.notessimo.com/web/static/compose/V4-1.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V4-1.jpg" alt="V4 Screenshot" width="350"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://cdn.notessimo.com/web/static/compose/V4-2.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V4-2.jpg" alt="V4 Screenshot" width="350"/></a><br/><br/>
+</center>
+<center class="images">
+<a href="https://cdn.notessimo.com/web/static/compose/V4-3.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V4-3.jpg" alt="V4 Screenshot" width="350"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://cdn.notessimo.com/web/static/compose/V4-4.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V4-4.jpg" alt="V4 Screenshot" width="350"/></a>
+</center>
+
+Enjoy this [awesome song](https://notessimo.net/s/C9r9qCytSH) by [Lexas](https://notessimo.net/u/Lexas)!
+
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/xKk45XHOatw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
+                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/10/20/alpha.html' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>

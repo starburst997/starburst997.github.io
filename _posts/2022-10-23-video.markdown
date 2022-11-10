@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Audio / Video export (v2022.13)"
+date:   2022-10-23 10:56:00 -0400
+categories: post
+---
+
+Being able to export to video was a much-requested feature for the longest time and it is finally available! Still a bit rough but functional!
+
+Previously users would screen record the notessimo player
+
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/VyYUMKREyoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Besides the obvious watermark and low quality, it is also very hard to get a consistant perfect 60fps while screen recording which I think really helps improve the overall quality perception of the video.
+
+Only `.avi` export is available currently but `.mp4` is coming very soon, I didn't want to just hastily bundled a 100MB+ `ffmpeg` build along the binary and the `.avi` format is extremely simple to support (with the downside of creating gigantic file but quality-wise, it is perfect).
+
+Audio export is also available in `.wav`, `.mp3` and `.ogg`!
+
+You can now see the difference with the new video exporter by comparing an [upload](https://notessimo.net/s/eBORKaihIJ) from one of the users, [Antonim](https://notessimo.net/u/Ace1257), the output is now a perfect 60fps with perfect audio sync and quality!
+
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/Uw8V9jDDsF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
+                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/10/23/video.html' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>

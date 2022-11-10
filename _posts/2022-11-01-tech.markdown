@@ -1,0 +1,110 @@
+---
+layout: post
+title:  "The tech behind Notessimo (part 1)"
+date:   2022-11-01 10:56:00 -0400
+categories: post
+---
+
+### A brief overview of the tech used to create [Notessimo](https://notessimo.net).
+
+#### The Flash Days (2007-2014)
+
+[Past versions](https://notessimo.net/compose/past) of [Notessimo](https://notessimo.net) used to be in [Flash](https://en.wikipedia.org/wiki/Adobe_Flash), it was quite the limited platform, especially back in the V1 days (~2007). To produce sounds dynamically I had to resort to a clever trick of actually generating byte by byte a `.swf` (flash file format) that represented an empty flash file with only a single sound object being played and load those bytes! If I remember correctly, to play without gap, the length also had to be a multiple of 2048 and properly timed to play at the correct frame, surprisingly it worked pretty well!
+
+<center class="images">
+<a href="https://en.wikipedia.org/wiki/Adobe_Flash" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/Flash.webp" alt="Flash Logo" height="100"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<!--<a href="https://en.wikipedia.org/wiki/PHP" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/php.png" alt="PHP Logo" height="80"/></a>&nbsp;&nbsp;-->
+<a href="https://www.phpbb.com/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/phpbb.png" alt="phpbb Logo" height="80"/></a>&nbsp;&nbsp;
+<a href="https://www.mysql.com/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/mysql.jpg" alt="MySQL Logo" height="100"/></a>&nbsp;&nbsp;
+<br/><br/>
+</center>
+
+V2 introduced the website ([php](https://en.wikipedia.org/wiki/PHP)) and forum ([phpBB](https://www.phpbb.com/)) along with the database ([mysql](https://www.mysql.com/)) of user-generated content. V3 improve on that, still being made in Flash but the website was now using [Invision Power Board](https://invisioncommunity.com/).
+
+<center class="images">
+<a href="https://cdn.notessimo.com/web/static/compose/V1-1.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V1-1.jpg" alt="Notessimo V1" width="230"/></a>&nbsp;&nbsp;
+<a href="https://cdn.notessimo.com/web/static/compose/V2-1.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V2-1.jpg" alt="Notessimo V2" width="230"/></a>&nbsp;&nbsp;
+<a href="https://cdn.notessimo.com/web/static/compose/V3-1.jpg" target="_blank"><img src="https://cdn.notessimo.com/web/static/compose/V3-1.jpg" alt="Notessimo V3" width="230"/></a><br/><br/>
+</center>
+*Above from left to right: V1 (2007), V2 (2008), V3 (2014)*
+
+<br/>
+#### Revival (2020 Pandemic - Present)
+
+I was pretty under-stimulated at my current job at the time and decided to start out a [Mod Tracker](https://en.wikipedia.org/wiki/Music_tracker) player in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) as a fun side-project at home to improve my `unsafe` / low-level / optimization skill in C#. With the news that [Flash was going to die](https://www.adobe.com/ca/products/flashplayer/end-of-life.html), I felt pretty bad that soon all the (70k+) songs in the database were going to become unplayable and be forever lost. I then repurpose my library to also support the Notessimo file format with a focus on fast dynamic music synthesis usuable for video games. 
+
+<center class="images">
+<a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/csharp.png" alt="C# Logo" height="85"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://en.wikipedia.org/wiki/Music_tracker" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/mod.gif" alt="Mod Tracker" height="100"/></a><br/><br/>
+</center>
+
+With the pandemic now forcing us all at home, what started as a simple player to preserve all the user-generated content evolved to a brand-new re-imagining of the composer for the modern age. 
+
+I settled with [Unity](https://unity.com/) as the framework for the composer / player; battle-tested, video games oriented, use C# and used by nearly everyone in the industry, it was a no-brainer. Although, very far from perfect sadly, but my love / hate relationship with Unity will be discussed in further details in future posts.
+
+<center class="images">
+<a href="https://unity.com/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/unity.png" alt="Unity Logo" height="85"/></a><br/><br/>
+</center>
+
+I needed a brand-new website as well and decided to go with [NextJS](https://nextjs.org/), wanted to see what the fuss was all about since it uses [React](https://reactjs.org/). Loved the concept behind NextJS, everything is stored as static files that can be generated / updated on-demand, you get an html version that is served on the first request and subsequent pages only load a small json files. Makes eveything lightning fast compared to the vast majority of websites that still do server-side rendering. React on the other hand, I had a mixed reception, especially since when I started using it, everything was [class-based](https://reactjs.org/docs/components-and-props.html), took a break, and came back with everything now being functional components. Not sure it was for the best though, but I jumped on the bandwagon nonetheless since I wanted to keep my web-dev skills up to date (React is the most popular web-framework at the time of writing).
+
+<center class="images">
+<a href="https://nextjs.org/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/nextjs.png" alt="NextJS Logo" height="85"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://reactjs.org/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/react.png" alt="React Logo" height="70"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://en.wikipedia.org/wiki/TypeScript" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/typescript.png" alt="Typescript Logo" height="70"/></a><br/><br/>
+</center>
+
+On the backend side I decided to check out [Kubernetes](https://kubernetes.io/) and absolutely loved it! Never will I go back to the good-old days of [SSH](https://en.wikipedia.org/wiki/Secure_Shell) into a [VPS](https://en.wikipedia.org/wiki/Virtual_private_server), manually editing config file, upgrading linux, etc. I keep a minimum of 2 pods running for each of the services I created along with load-balancing. Currently, it is overkill since Notessimo doesn't need multiple machines but again, it was something I wanted to try to keep my skills up to date, previously I had use [ElasticBeanstalk](https://aws.amazon.com/elasticbeanstalk/). And even if it only uses one machine currently, I will argue that the simplicity of having just a single `.yaml` per service (+imposing limits) and the ability to easily move between hosting provider if I wanted to, is well worth it.
+
+<center class="images">
+<a href="https://kubernetes.io/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/kubernetes2.png" alt="Kubernetes Logo" height="80"/></a><br/><br/>
+</center>
+
+For the database I settled with [PostgreSQL](https://www.postgresql.org/), having used MySQL in the past, I wanted to try something different this time around. For a quick rest API interface, I used [PHP](https://www.php.net/), not very sexy, but it gets the job done and the vast majority of the workload is simply talking to the database via manually crafted SQL requests.
+
+<center class="images">
+<a href="https://www.postgresql.org/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/postgresql.png" alt="PostreSQL Logo" height="50"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://en.wikipedia.org/wiki/PHP" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/php.png" alt="PHP Logo" height="60"/></a>&nbsp;&nbsp;
+<br/><br/>
+</center>
+
+Storage is done on an [S3](https://aws.amazon.com/s3/)-like service and delivered through a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network).
+
+<center class="images">
+<a href="https://aws.amazon.com/s3/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/S3.png" alt="S3 Logo" height="80"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://aws.amazon.com/cloudfront/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/cloudfront.png" alt="Cloudfront Logo" height="80"/></a>&nbsp;&nbsp;
+<br/><br/>
+</center>
+
+The community forum was moved to [Discourse](https://www.discourse.org/) with its own [domain](https://community.notessimo.net) and with a custom plugin that offers deep integration with Notessimo, like the ability to share song as embed similar to YouTube. It is also used as the account management / login system. I cannot recommend Discourse enough as an operator, it is extremely well made. 
+
+<center class="images">
+<a href="https://www.discourse.org/" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/discourse.png" alt="Discourse Logo" height="80"/></a><br/><br/>
+</center>
+
+Putting all of that together we get the new and improved Notessimo! The app come bundled with a WebView so the website / community is always easily accessible and can talk to the Unity app.
+
+<center class="images">
+<a href="https://cdn.notessimo.com/misc/blog/Tech3.jpg" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/Tech3.jpg" alt="Webview / Unity" width="600"/></a><br/><br/>
+</center>
+
+Thanks to Unity's cross-platform support (and WebView being now available natively on all platforms), we can have a native version of the app for [iOS](https://testflight.apple.com/join/e9rpQsKx) / [Android](https://play.google.com/store/apps/details?id=com.failsafegames.tracker) / [Windows](https://cdn2.notessimo.com/release/notessimo/Windows/Notessimo.application) / [Mac](https://testflight.apple.com/join/e9rpQsKx) or even on the [Web](https://notessimo.net) with Unity's WebGL export.
+
+This new version is vastly more complex than previous version of Notessimo but is also easier to maintain and allow for much more features, like the [instruments database](https://notessimo.net/browse/instruments) (currently at over 14K+ instruments!). 
+
+Thanks for reading! Enjoy this [awesome song](https://notessimo.net/s/d59zUgGexa) by [Antonim](https://notessimo.net/u/Ace1257)!
+
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/fL-1y7VR5A0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
+                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/11/01/tech.html' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>

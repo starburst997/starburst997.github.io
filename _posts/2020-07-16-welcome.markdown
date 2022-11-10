@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Welcome"
-date:   2020-07-16 13:24:59 -0400
-categories: post
----
-Not much to see, will update eventually

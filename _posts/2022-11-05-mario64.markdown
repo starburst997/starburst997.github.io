@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "The never-ending ascending pitch illusion from Super Mario 64"
+date:   2022-11-05 10:56:00 -0400
+categories: post
+---
+
+Recently posted a clip of [Notessimo](https://notessimo.net) showcasing the "Endless Staircases" sequence from Super Mario 64 on [Reddit](https://www.reddit.com/r/blackmagicfuckery/comments/ymvzhg/the_neverending_ascending_pitch_illusion_from/).
+It kind of blew up getting on the front page with nearly 30k upvotes and 1.7M+ video views!
+
+It uses an auditory illusion called the "[Shepard Tone](https://en.wikipedia.org/wiki/Shepard_tone)". It gives the impression of a never-ending ascending pitch.
+
+The higher the notes on the staff, the higher the pitch. There are two sequences of notes separated by two octaves (so one sequence has a higher pitch and the other has a lower pitch).
+
+Part of the trick is that as the loop breaks, the notes from the higher sequence will gradually lower their volume while the notes from the lower sequence will become louder, tricking the brain that the pitch is still continuously ascending while in reality it didn't.
+
+Here's the [10 hour](https://notessimo.net/s/DlTiMCtk67) version on [YouTube](https://www.youtube.com/watch?v=fR5tk7uIiQI&t=10417s), it was also a good stress test for the video export and making sure the engine can support songs of multiple hours just as well as regular ones.
+
+Check it out as well in the [composer](https://notessimo.net/s/iSn7l12ReH) to play with the notes!
+
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/fR5tk7uIiQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
+                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/11/05/mario64.html' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
