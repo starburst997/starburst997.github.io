@@ -13,7 +13,7 @@ Not an exhaustive list, some projects I worked on got cancelled, others I can't 
 <center class="video-wrapper about"><iframe width="560" height="315" src="https://www.youtube.com/embed/LgzixW-kiJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 </div>
 
-- [Cat Game - The Cats Collector!](https://apps.apple.com/ca/app/cat-game-the-cats-collector/id1125011102), a casual game available on [iOS](https://apps.apple.com/ca/app/cat-game-the-cats-collector/id1125011102) / [Android](https://play.google.com/store/apps/details?id=com.minogames.cats.client&hl=en_CA&gl=US&pli=1) that I worked on while being the CTO of [Mino Games](https://www.minogames.com/). Made with [Haxe](https://haxe.org/) and use [OpenFL](https://www.openfl.org/).
+- [Cat Game - The Cats Collector!](https://play.google.com/store/apps/details?id=com.minogames.cats.client&hl=en_CA&gl=US&pli=1), a casual game available on [iOS](https://apps.apple.com/ca/app/cat-game-the-cats-collector/id1125011102) / [Android](https://play.google.com/store/apps/details?id=com.minogames.cats.client&hl=en_CA&gl=US&pli=1) that I worked on while being the CTO of [Mino Games](https://www.minogames.com/). Made with [Haxe](https://haxe.org/) and use [OpenFL](https://www.openfl.org/).
 
 <div class="video-container">
 <center class="video-wrapper about"><iframe width="560" height="315" src="https://www.youtube.com/embed/N2-5lLNVcJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
