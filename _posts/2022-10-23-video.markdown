@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Audio / Video export (v2022.13)"
+title:  "Audio / Video export (Notessimo v2022.13)"
 date:   2022-10-23 10:56:00 -0400
 categories: post
 ---
