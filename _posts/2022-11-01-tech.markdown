@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The tech behind Notessimo (part 1) - Brief overview"
+title:  "Brief overview of the tech behind Notessimo (part 1)"
 date:   2022-11-01 10:56:00 -0400
 categories: post
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Super Mario Paint support (Notessimo v2022.15)"
+title:  "Super Mario Paint support (v2022.15)"
 date:   2022-10-27 10:56:00 -0400
 categories: post
 ---
