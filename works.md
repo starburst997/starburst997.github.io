@@ -46,4 +46,4 @@ Not an exhaustive list, some projects I worked on got cancelled, others I can't 
 <a href="https://cdn.notessimo.com/misc/blog/tetris.jpg" target="_blank"><img src="https://cdn.notessimo.com/misc/blog/tetris3.jpg" alt="Me with " height="150"/></a><br/><br/>
 </center>
 
-You can check out my [LinkedIn](https://www.linkedin.com/in/jeandenisboivin/?locale=en_US) for my Resume.
+You can also check out my [Résumé](/resume) or [LinkedIn](https://www.linkedin.com/in/jeandenisboivin/?locale=en_US) for more info.
