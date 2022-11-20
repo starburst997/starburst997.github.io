@@ -17,17 +17,3 @@ Feel free to leave comments on the new [community website](https://community.not
 Enjoy this [awesome song](https://notessimo.net/s/SxTzDtBTWk) by [Antonim](https://notessimo.net/u/Ace1257)!
 
 <center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/N1bT17uXezA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-<br/>
-<div id='discourse-comments'></div>
-
-<script type="text/javascript">
-  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
-                     discourseEmbedUrl: 'https://jd.boiv.in/post/2021/03/03/new-website.html' };
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>

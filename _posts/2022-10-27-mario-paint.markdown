@@ -36,17 +36,3 @@ Super Mario Paint import is free and available right now to be exported to video
 Big shoutout to [CyanSMP64](https://notessimo.net/u/Wikkid_Vommit) for testing the features! And check out the result below, [Lone Digger](https://notessimo.net/s/BMXpLJIH1F) by [Caravan Palace](https://en.wikipedia.org/wiki/Caravan_Palace) done by [Xanderoni](https://notessimo.net/u/Xanderoni).
 
 <center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/Thy8Epx646U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-<br/>
-<div id='discourse-comments'></div>
-
-<script type="text/javascript">
-  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
-                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/10/27/mario-paint.html' };
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>

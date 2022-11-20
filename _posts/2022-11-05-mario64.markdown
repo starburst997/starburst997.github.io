@@ -19,17 +19,3 @@ Here's the [10 hour](https://notessimo.net/s/DlTiMCtk67) version on [YouTube](ht
 Check it out as well in the [composer](https://notessimo.net/s/iSn7l12ReH) to play with the notes!
 
 <center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/fR5tk7uIiQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-<br/>
-<div id='discourse-comments'></div>
-
-<script type="text/javascript">
-  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
-                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/11/05/mario64.html' };
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>

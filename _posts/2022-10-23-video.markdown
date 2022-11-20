@@ -20,17 +20,3 @@ Audio export is also available in `.wav`, `.mp3` and `.ogg`!
 You can now see the difference with the new video exporter by comparing an [upload](https://notessimo.net/s/eBORKaihIJ) from one of the users, [Antonim](https://notessimo.net/u/Ace1257), the output is now a perfect 60fps with perfect audio sync and quality!
 
 <center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/Uw8V9jDDsF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-<br/>
-<div id='discourse-comments'></div>
-
-<script type="text/javascript">
-  DiscourseEmbed = { discourseUrl: 'https://community.notessimo.net/',
-                     discourseEmbedUrl: 'https://jd.boiv.in/post/2022/10/23/video.html' };
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>
