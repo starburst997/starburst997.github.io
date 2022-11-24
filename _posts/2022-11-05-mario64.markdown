@@ -14,8 +14,8 @@ The higher the notes on the staff, the higher the pitch. There are two sequences
 
 Part of the trick is that as the loop breaks, the notes from the higher sequence will gradually lower their volume while the notes from the lower sequence will become louder, tricking the brain that the pitch is still continuously ascending while in reality it didn't.
 
-Here's the [10 hour](https://notessimo.net/s/DlTiMCtk67) version on [YouTube](https://www.youtube.com/watch?v=fR5tk7uIiQI&t=10417s), it was also a good stress test for the video export and making sure the engine can support songs of multiple hours just as well as regular ones.
+Here's the V2 (more accurate sounds and note opacity) in 4K on on [YouTube](https://www.youtube.com/watch?v=MhAEmx_bXnk), it was also a good stress test for the video export to makes sure it can export high-resolution videos.
 
-Check it out as well in the [composer](https://notessimo.net/s/iSn7l12ReH) to play with the notes!
+Check it out as well in the [composer](https://notessimo.net/s/g5sLOIGxBD) to play with the notes!
 
-<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/fR5tk7uIiQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/MhAEmx_bXnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
