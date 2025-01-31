@@ -174,12 +174,6 @@ Now we need an additional file (*Azure.CodeSigning.Dlib.dll*) that is only avail
 
 ### Sign your EXE
 
-Login to Azure using your Tenant ID
-
-```sh
-az login --tenant <TENANT_ID>
-```
-
 Create a JSON file with the variables we noted above (save the path)
 
 ```json
@@ -201,6 +195,12 @@ Based on the **Location** of your account, use the correct **Endpoint** url
 "West Europe" = "https://weu.codesigning.azure.net"
 ```
 
+Login to Azure using your Tenant ID
+
+```sh
+az login --tenant <TENANT_ID>
+```
+
 Now we can sign any EXE! Notice that the value `10.0.22621.0` might change in the future.
 
 ```sh
@@ -211,7 +211,7 @@ sign /v /debug /fd SHA256 /tr "http://timestamp.acs.microsoft.com" /td SHA256 `
 "<PATH_TO_EXE>"
 ```
 
-Congrats! You now have a code signed app! Upload it somewhere and use your browser to download it, notice how there is no scary popup at all anymore!
+Congrats! You now have a code signed app! Upload it somewhere and use your browser to [download it](https://cdn.notessimo.com/misc/codesign/CodeSignCpp.exe), notice how there is no scary popup at all anymore!
 
 <br/>
 
@@ -234,7 +234,9 @@ Give it a name and select the **Single Tenant** option, click on **Register**.
 
 In your newly created app, note the **Application (client) ID**.
 
-Select **Manage** / **Certificates & secrets** and click on **New client secret**, give it a name & expiration date and note the **Value**. *(sadly the "no expiration" option is not available anymore)*
+Select **Manage** / **Certificates & secrets** and click on **New client secret**, give it a name & expiration date and note the **Value**. 
+
+*(sadly the "no expiration" option is not available anymore)*
 
 <br/>
 
@@ -247,7 +249,9 @@ Select **Manage** / **Certificates & secrets** and click on **New client secret*
   <a href="/assets/posts/2025-01-29-code-signing/gh_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_3.png" alt="Search for app" height="200"/></a>
 </center>
 
-We also need to add the **Trusted Signing Certificate Profile Signer** role to the app just like we did on our user. In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing Accounts** service and select your account.
+We also need to add the **Trusted Signing Certificate Profile Signer** role to the app just like we did on our user.
+
+In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing Accounts** service and select your account.
 
 On the left panel select **Access Control (IAM)** and pick **Add** / **Add role assignment**.
 
@@ -259,7 +263,7 @@ Search for **Trusted Signing Certificate Profile Signer**, go **Next**, click on
 
 <center class="images borders">
   <a href="/assets/posts/2025-01-29-code-signing/gh_7.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_7.png" alt="Create repository" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_6.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_6.png" alt="Secrets" height="200"/></a>&
+  <a href="/assets/posts/2025-01-29-code-signing/gh_6.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_6.png" alt="Secrets" height="200"/></a>
 </center>
 
 Create your git repository on [Github](https://github.com/new), or clone my [sample repository](https://github.com/starburst997/windows-code-sign-test) which includes a basic C++ application.
