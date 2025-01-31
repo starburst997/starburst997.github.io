@@ -42,7 +42,7 @@ Linux doesn't have any of that *(in the context of scary popup from downloading 
 
 ## Setup code signing in Azure
 
-<center class="images">
+<center class="images borders">
   <a href="/assets/posts/2025-01-29-code-signing/azure.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/azure.png" alt="Sign up for Azure" height="200"/></a>
 </center>
 
