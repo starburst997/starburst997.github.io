@@ -65,6 +65,8 @@ However, the cheers were shortlived as no matter what I tried, my driving licens
 
 Second time, I was very careful, made sure to use good lighting, only use my driver license, used a device with better camera and carefully wait for the auto-detect to works.
 
+<!-- I might be prevented from verifying because I use a Fizz number? Apparently only Bell / Roger / Telus can be properly verified? Not clear... -->
+
 <br/>
 
 ## Conclusion
