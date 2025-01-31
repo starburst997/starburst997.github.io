@@ -5,6 +5,12 @@ date:   2025-01-29 18:00:00 -0400
 categories: post
 ---
 
+(*TLDR; Get code signing working for Windows for free\* via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign-test) to see how simple it can get once everything is setup*)
+
+<br/>
+
+## Introduction
+
 For the longest time, code signing on Windows required to buy certificates from rather sketchy companies ([Sectigo](https://www.sectigo.com/) / [DigiCert](https://www.digicert.com/) / etc...). This also required quite a lengthy process with terrible customer services to get verified (requiring in some case to [hire a Lawer or CA](https://www.sectigo.com/knowledge-base/detail/OV-Code-Signing-Validation-for-Organizations-and-Individuals/kA01N000000brb0)), exorbitant prices (500$+ / year) and the use of primitive technologies (forcing to [use internet explorer](https://signmycode.com/resources/generate-code-signing-certificate-using-internet-explorer-mode-in-microsoft-edge) to generate the private key).
 
 Finally, [Microsoft recently launched](https://techcommunity.microsoft.com/blog/microsoft-security-blog/trusted-signing-is-now-open-for-individual-developers-to-sign-up-in-public-previ/4273554) a service under [Azure](https://en.wikipedia.org/wiki/Microsoft_Azure) to help ease this process and get ready in just a few minutes with a relatively affordable price and easy verification for Individual Developer.
