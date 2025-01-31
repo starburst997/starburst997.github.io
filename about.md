@@ -11,7 +11,7 @@ I started my professional career right after high school and I've since worked i
 
 I can take care of the whole app / game development process, something I've done numerous times at various companies. I have no problem jumping right in a new project and be a productive member the first day.
 
-Don't hesitate to contact me for any freelance / consulting work you might have; I am always interested. Not looking for any permanent position at the moment.
+Don't hesitate to contact me for any freelance / consulting work you might have; I am always interested. Currently residing in Montreal and looking for new opportunities (both local or fully remote).
 
 <!--
 Programmer since a little kid and currently having fun with [Unity](https://unity.com/) and [Haxe](https://haxe.org/), hopefully I'll be able to get my hands on [Jai](https://en.wikipedia.org/?title=JAI_(programming_language)&redirect=no) eventually!
