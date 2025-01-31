@@ -340,7 +340,7 @@ You can then start the action by going to the **Actions** tabs, selecting your a
 
 Once the action has finished running, you can see the uploaded artifact and download your signed application!
 
-See for yourself: [Signed](https://cdn.notessimo.com/misc/codesign/CodeSignCpp.exe) / [Unsigned](https://cdn.notessimo.com/misc/codesign/CodeSignCpp-unsigned.exe)
+See the result for yourself: [Signed](https://cdn.notessimo.com/misc/codesign/CodeSignCpp.exe) / [Unsigned](https://cdn.notessimo.com/misc/codesign/CodeSignCpp-unsigned.exe)
 
 <br/>
 
