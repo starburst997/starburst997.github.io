@@ -5,7 +5,7 @@ date:   2025-01-29 18:00:00 -0400
 categories: post
 ---
 
-(*TLDR; Get code signing working for Windows for free\* via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign-test) to see how simple it can get once everything is setup*)
+(*TLDR; Get code signing working for Windows for free\* with immediate SmartScreen reputation via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign-test) to see how simple it can get once everything is setup*)
 
 <br/>
 
@@ -21,11 +21,11 @@ Finally, [Microsoft recently launched](https://techcommunity.microsoft.com/blog/
 
 ## What is Code Signing
 
-Ever saw a scary warning while downloading a EXE?
+Ever saw a [scary warning](https://en.wikipedia.org/wiki/Microsoft_SmartScreen) while downloading a EXE?
 
 <center class="images">
-  <a href="/assets/posts/2025-01-29-code-signing/warning_5.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/warning_5.png" alt="Scary Warning 1" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/warning_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/warning_3.png" alt="Scary Warning 2" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/warning_5.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/warning_5.png" alt="Scary Warning 1" title="Scary Warning 1" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/warning_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/warning_3.png" alt="Scary Warning 2" title="Scary Warning 1" height="200"/></a>
 </center>
 
 This is because the application is **NOT** code signed. This is an awful experience for anyone trying to download something and as a developer, is gut wrenching to feel powerless to remove this barrier without caving in to the Certificates Mafia Monopoly.
@@ -43,7 +43,7 @@ Linux doesn't have any of that *(in the context of scary popup from downloading 
 ## Setup code signing in Azure
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/azure.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/azure.png" alt="Sign up for Azure" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/azure.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/azure.png" alt="Sign up for Azure" title="Sign up for Azure" height="200"/></a>
 </center>
 
 [Create an account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account) (new account come with free credits) and sign in to the [Azure portal](https://portal.azure.com/).
@@ -57,9 +57,9 @@ You should have a default Subscription / Tenant (if not, you didn't fill the for
 ### Register the Trusted Signing resource provider
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/provider_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/provider_1.png" alt="Search for Subscriptions" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/provider_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/provider_2.png" alt="Select Resource providers" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/provider_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/provider_3.png" alt="Register CodeSigning" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/provider_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/provider_1.png" alt="Search for Subscriptions" title="Search for Subscriptions" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/provider_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/provider_2.png" alt="Select Resource providers" title="Select Resource providers" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/provider_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/provider_3.png" alt="Register CodeSigning" title="Register CodeSigning" height="200"/></a>
 </center>
 
 In the [Azure portal](https://portal.azure.com/), search for **Subscriptions** service, click on your subscription.
@@ -73,23 +73,23 @@ Search for **Microsoft.CodeSigning**, click on "..." and select **Register**.
 ### Create a Trusted Signing account
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/account_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/account_1.png" alt="Create account" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/account_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/account_2.png" alt="Fill info" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/account_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/account_1.png" alt="Create account" title="Create account" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/account_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/account_2.png" alt="Fill info" title="Fill info" height="200"/></a>
 </center>
 
 In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing Accounts** service and **Create** one.
 
-Fill the form by selecting your **Subscription**, select **Create new** for **Resource group** (use any name you want). Pick an **Account name** (any name you want), a **Region** and finally a **Pricing tier** (at the time of writing, it seems like the 9.99$ is actually *free* for individual developer for the preview period).
+Fill the form by selecting your **Subscription**, select **Create new** for **Resource group** (use any name you want). Pick an **Account name** (any name you want), a **Region** and finally a **Pricing tier** (at the time of writing, it seems like the 9.99$ is actually *free\** for individual developer for the preview period).
 
 <br/>
 
 ### Assign roles
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/role_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_1.png" alt="Select account" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/role_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_2.png" alt="Add role assignment" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/role_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_3.png" alt="Select role" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/role_4.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_4.png" alt="Add member" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/role_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_1.png" alt="Select account" title="Select account" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/role_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_2.png" alt="Add role assignment" title="Add role assignment" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/role_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_3.png" alt="Select role" title="Select role" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/role_4.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_4.png" alt="Add member" title="Add member" height="200"/></a>
 </center>
 
 In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing Accounts** service and select the account you just created.
@@ -107,9 +107,9 @@ Repeat for the second role.
 ### Create an identity validation request
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/identity_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/identity_1.png" alt="Create account" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/identity_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/identity_2.png" alt="Fill form" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/identity_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/identity_3.png" alt="Au10tix" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/identity_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/identity_1.png" alt="Create account" title="Create account" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/identity_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/identity_2.png" alt="Fill form" title="Fill form" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/identity_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/identity_3.png" alt="Au10tix" title="Au10tix" height="200"/></a>
 </center>
 
 In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing Accounts** service and select your account.
@@ -129,8 +129,8 @@ Once this is done, it takes around 5-10 minutes before the status changes to **C
 ### Create a Certificate profile
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/certicate_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/certicate_1.png" alt="Create certificate" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/certicate_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/certicate_2.png" alt="Fill form" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/certicate_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/certicate_1.png" alt="Create certificate" title="Create certificate" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/certicate_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/certicate_2.png" alt="Fill form" title="Fill form" height="200"/></a>
 </center>
 
 In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing Accounts** service and select your account.
@@ -150,9 +150,9 @@ You are now ready to sign your first application!
 ### Note some values
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/local_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/local_1.png" alt="Trusted Signing account" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/local_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/local_2.png" alt="Certificate profile" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/local_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/local_3.png" alt="Tenant ID" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/local_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/local_1.png" alt="Trusted Signing account" title="Trusted Signing account" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/local_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/local_2.png" alt="Certificate profile" title="Certificate profile" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/local_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/local_3.png" alt="Tenant ID" title="Tenant ID" height="200"/></a>
 </center>
 
 First, we need to takes note of a few variables, copy your **Trusted Signing account** name you used earlier (also take note of the **Location**) and the **Certificate profile** name as well.
@@ -228,10 +228,10 @@ Now that everything works locally, we can easily automate the code signing steps
 ### Create an App
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/gh_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_1.png" alt="App registrations" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_2.png" alt="Certificate profile" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_5.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_5.png" alt="Copy Client ID" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_4.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_4.png" alt="Create secret" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/gh_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_1.png" alt="App registrations" title="App registrations" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/gh_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_2.png" alt="Certificate profile" title="Certificate profile" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/gh_5.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_5.png" alt="Copy Client ID" title="Copy Client ID" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/gh_4.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_4.png" alt="Create secret" title="Create secret" height="200"/></a>
 </center>
 
 In the [Azure portal](https://portal.azure.com/), search for **App registrations** service and click on **New registration**.
@@ -249,10 +249,10 @@ Select **Manage** / **Certificates & secrets** and click on **New client secret*
 ### Assign roles
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/role_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_1.png" alt="Select account" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/role_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_2.png" alt="Add role assignment" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/role_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_3.png" alt="Select role" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_3.png" alt="Search for app" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/role_1.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_1.png" alt="Select account" title="Select account" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/role_2.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_2.png" alt="Add role assignment" title="Add role assignment" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/role_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/role_3.png" alt="Select role" title="Select role" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/gh_3.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_3.png" alt="Search for app" title="Search for app" height="200"/></a>
 </center>
 
 We also need to add the **Trusted Signing Certificate Profile Signer** role to the app just like we did on our user.
@@ -268,8 +268,8 @@ Search for **Trusted Signing Certificate Profile Signer**, go **Next**, click on
 ### Create GIT repository
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/gh_7.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_7.png" alt="Create repository" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_6.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_6.png" alt="Secrets" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/gh_7.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_7.png" alt="Create repository" title="Create repository" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/gh_6.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_6.png" alt="Add secrets" title="Add secrets" height="200"/></a>
 </center>
 
 Create your git repository on [Github](https://github.com/new), or clone my [sample repository](https://github.com/starburst997/windows-code-sign-test) which includes a basic C++ application.
@@ -342,8 +342,8 @@ Thanks to the [azure/trusted-signing-action](https://github.com/azure/trusted-si
 ### Run the action
 
 <center class="images borders">
-  <a href="/assets/posts/2025-01-29-code-signing/gh_8.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_8.png" alt="Start action" height="200"/></a>&nbsp;&nbsp;
-  <a href="/assets/posts/2025-01-29-code-signing/gh_9.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_9.png" alt="Download artifact" height="200"/></a>
+  <a href="/assets/posts/2025-01-29-code-signing/gh_8.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_8.png" alt="Start action" title="Start action" height="200"/></a>&nbsp;&nbsp;
+  <a href="/assets/posts/2025-01-29-code-signing/gh_9.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_9.png" alt="Download artifact" title="Download artifact" height="200"/></a>
 </center>
 
 You can then start the action by going to the **Actions** tabs, selecting your action (**Build Windows**) and click on **Run workflow**.
@@ -351,6 +351,8 @@ You can then start the action by going to the **Actions** tabs, selecting your a
 Once the action has finished running, you can see the uploaded artifact and download your signed application!
 
 See the result for yourself: [Signed](https://cdn.notessimo.com/misc/codesign/CodeSignCpp.exe) / [Unsigned](https://cdn.notessimo.com/misc/codesign/CodeSignCpp-unsigned.exe)
+
+Immediate [SmartScreen](https://en.wikipedia.org/wiki/Microsoft_SmartScreen) reputation as well! Which is something that even some of the expensive code signing certificates don't supply.
 
 <br/>
 
