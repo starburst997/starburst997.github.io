@@ -67,6 +67,14 @@
     }
 }
 
+.borders {
+    img {
+        outline: 1px solid rgb(0, 0, 0);
+        height: auto !important;
+        max-height: 170px;
+    }
+}
+
 .video-wrapper.about iframe {
     max-width: 444px;
     max-height: 250px;
