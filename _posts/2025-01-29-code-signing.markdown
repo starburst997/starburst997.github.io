@@ -340,10 +340,12 @@ You can then start the action by going to the **Actions** tabs, selecting your a
 
 Once the action has finished running, you can see the uploaded artifact and download your signed application!
 
+See for yourself: [Signed](https://cdn.notessimo.com/misc/codesign/CodeSignCpp.exe) / [Unsigned](https://cdn.notessimo.com/misc/codesign/CodeSignCpp-unsigned.exe)
+
 <br/>
 
 ## Conclusion
 
-I am really glad Microsoft finally made it easy and affordable to code sign EXE on Windows, hopefully they will keep the price low for individual developer. Now, any new project I do, I can simply copy / paste the secrets into the new repository, copy the workflow and be setup with code signing in just a few seconds.
+I am really glad Microsoft finally made it easy and affordable to code sign EXE on Windows, hopefully they will keep the price low for individual developer. Now, any new project I do, I can simply copy / paste the secrets into the new repository, copy the workflow file and be setup with code signing in just a few seconds.
 
 <br/>
