@@ -5,7 +5,7 @@ date:   2025-01-29 18:00:00 -0400
 categories: post
 ---
 
-(*TLDR; Get code signing working for Windows with immediate SmartScreen reputation via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign) to see how simple it can get once everything is setup*)
+*(**TL;DR**: Get code signing working for Windows with immediate SmartScreen reputation via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign) to see how simple it can get once everything is setup)*
 
 <br/>
 
