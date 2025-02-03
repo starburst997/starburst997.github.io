@@ -5,7 +5,7 @@ date:   2025-01-29 18:00:00 -0400
 categories: post
 ---
 
-(*TLDR; Get code signing working for Windows with immediate SmartScreen reputation via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign-test) to see how simple it can get once everything is setup*)
+(*TLDR; Get code signing working for Windows with immediate SmartScreen reputation via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign) to see how simple it can get once everything is setup*)
 
 <br/>
 
@@ -290,7 +290,7 @@ In the [Azure portal](https://portal.azure.com/), search for **Trusted Signing A
   <div><a href="/assets/posts/2025-01-29-code-signing/gh_6.png" target="_blank"><img src="/assets/posts/2025-01-29-code-signing/gh_6.png" alt="Add secrets" title="Add secrets" height="200"/></a><br/>2</div>
 </center>
 
-1. Create your git repository on [Github](https://github.com/new), or clone my [sample repository](https://github.com/starburst997/windows-code-sign-test) which includes a basic C++ application.
+1. Create your git repository on [Github](https://github.com/new), or clone my [sample repository](https://github.com/starburst997/windows-code-sign) which includes a basic C++ application.
 
 2. Add these 6 secrets to your repository (**Settings** / **Security** / **Secrets and variables** / **Actions**, click **New repository secret**).
    - `AZURE_CLIENT_ID`: `Your app client ID`
