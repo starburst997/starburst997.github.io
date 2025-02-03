@@ -7,6 +7,8 @@ categories: post
 
 *(**TL;DR**: Get code signing working for Windows with immediate SmartScreen reputation via Github Action, check this [sample repository](https://github.com/starburst997/windows-code-sign) to see how simple it can get once everything is setup)*
 
+*(Part one of my series on code-signing / distributing apps, check [Part 2 on Apple](/post/2025/02/02/code-signing-apple.html))*
+
 <br/>
 
 ## Introduction
