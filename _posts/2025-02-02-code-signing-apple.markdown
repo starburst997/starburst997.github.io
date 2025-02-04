@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Code Signing for Apple"
+title:  "Code Signing for Apple without a mac"
 date:   2025-02-02 18:00:00 -0400
 categories: post
 ---
