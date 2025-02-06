@@ -288,48 +288,6 @@ jobs:
       lane: 'internal'
 ```
 
-#### keystore.yml ([original](https://github.com/starburst997/android-code-sign/blob/v1/.github/workflows/keystore.yml))
-{% raw %}
-```yml
-name: Generate .keystore
-
-on:
-  workflow_dispatch:
-    inputs:
-      alias:
-        type: string
-        description: Alias (anything you want)
-      name:
-        type: string
-        description: Your Name
-      organization:
-        type: string
-        description: Organization Name
-      locality:
-        type: string
-        description: Locality / City
-      state:
-        type: string
-        description: State / Province
-      country:
-        type: string
-        description: Country (2 letter code)
-
-jobs:
-  setup:
-    uses: starburst997/android-code-sign/.github/workflows/keystore.yml@v1
-    needs: [build]
-    secrets: inherit
-    with:
-      alias: ${{ inputs.alias }}
-      name: ${{ inputs.name }}
-      organization: ${{ inputs.organization }}
-      locality: ${{ inputs.locality }}
-      state: ${{ inputs.state }}
-      country: ${{ inputs.country }}
-```
-{% endraw %}
-
 Notice that we need to specify the project's path, module and version.
 
 <br/>
