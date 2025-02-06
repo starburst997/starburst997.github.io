@@ -81,7 +81,7 @@ The [fastlane documentation](https://docs.fastlane.tools/actions/supply/) highli
   <div><a href="/assets/posts/2025-02-05-android-publish/google-service-08.png" target="_blank"><img src="/assets/posts/2025-02-05-android-publish/google-service-08.png" alt="Save JSON key" title="Save JSON key" /></a><br/>8</div>
 </center>
 
-5. Give it a name and ID, copy the resulting **Email address** (we will need it later). Click on **Done**, *NOT* ~Create and Continue~.
+5. Give it a name and ID, copy the resulting **Email address** (we will need it later). Click on **Done**, *NOT* ~~Create and Continue~~.
 
 6. Click on the vertical **three-dot icon** (under **Actions**) of your newly created account, and select **Manage keys**.
 
