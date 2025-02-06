@@ -135,7 +135,7 @@ For ease of use afterward, we'll save the keystore as **base64** and save it as 
 base64 .keystore
 ```
 
-I've also created a [Github Action](https://github.com/starburst997/android-publish/blob/main/.github/workflows/keystore.yml) that you can run in this repository called: **Generate .keystore**. It will also generate the **base64** version available in the artifact (don't forget to **delete** the artifact afterward!).
+I've also created a [Github Action](https://github.com/starburst997/android-publish/blob/main/.github/workflows/keystore.yml) that you can run in this repository called: **Generate .keystore**. It will also generate the **base64** version available in the artifact (don't forget to **delete** the artifact afterward!). You need to set the secret: `ANDROID_KEYSTORE_PASS` first since there is no way to input password string in Github Action yet.
 
 Either the PKCS12 or JKS variant will works.
 
@@ -296,9 +296,6 @@ on:
       alias:
         type: string
         description: Alias (anything you want)
-      password:
-        type: string
-        description: Password
       name:
         type: string
         description: Your Name
@@ -322,7 +319,6 @@ jobs:
     secrets: inherit
     with:
       alias: ${{ inputs.alias }}
-      password: ${{ inputs.password }}
       name: ${{ inputs.name }}
       organization: ${{ inputs.organization }}
       locality: ${{ inputs.locality }}
