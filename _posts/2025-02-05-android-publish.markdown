@@ -119,6 +119,29 @@ Look for `Successfully established connection to Google Play Store`.
 
 <br/>
 
+## Generate a Personal Access Token (PAT)
+
+<center class="images borders">
+  <div><a href="/assets/posts/2025-02-02-code-signing-apple/pat_01.png" target="_blank"><img src="/assets/posts/2025-02-02-code-signing-apple/pat_01.png" alt="Generate New Token (Classic)" title="Generate New Token (Classic)" /></a><br/>1</div>&nbsp;&nbsp;
+  <div><a href="/assets/posts/2025-02-02-code-signing-apple/pat_02.png" target="_blank"><img src="/assets/posts/2025-02-02-code-signing-apple/pat_02.png" alt="Use repo score" title="Use repo score"/></a><br/>2</div>
+</center>
+
+We also need to generate a **Personal Access Token** for Github. 
+
+This will enables us to increment a build number after each build.
+
+1. Visit your [settings page](https://github.com/settings/tokens) and click on **Generate new token** and select **Generate new token (classic)**.
+
+2. We need all the **repo** scope enabled. Set **no expiration**. Click **Generate token** and save the value.
+
+### Save secrets
+
+Save this secret in the github repository for your project:
+
+- `GH_PAT`: The value of your newly generated token
+
+<br/>
+
 ## Generate an upload key and keystore
 
 You can generate your key using [Android Studio](https://developer.android.com/studio/publish/app-signing#generate-key), but here's how you can do it on the command line using [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) (available in your JDK's bin folder):
@@ -135,7 +158,9 @@ For ease of use afterward, we'll save the keystore as **base64** and save it as 
 base64 .keystore
 ```
 
-I've also created a [Github Action](https://github.com/starburst997/keystore-gh-actions/blob/v1/.github/workflows/keystore.yml) that you can run in this repository called: **Generate .keystore**. It will also generate the **base64** version available in the artifact (don't forget to **delete** the artifact afterward!). You need to set the secret: `ANDROID_KEYSTORE_PASS` and `ANDROID_KEYALIAS_PASS` first since there is no way to input password string in Github Action yet.
+I've also created a [Github Action](https://github.com/starburst997/keystore-gh-actions) that you can run in [this repository](https://github.com/starburst997/android-code-sign) called: **Generate .keystore** ([.yml](https://github.com/starburst997/android-code-sign/blob/main/.github/workflows/keystore.yml)). You need to set the secrets: `ANDROID_KEYSTORE_PASS` and `ANDROID_KEYALIAS_PASS` first since there is no way to input password string in Github Action yet. Makes sure you added the `GH_PAT` secret as well.
+
+The action will add the `ANDROID_KEYALIAS_NAME` and `ANDROID_KEYSTORE_BASE64` secrets once done.
 
 Either the PKCS12 or JKS variant will works.
 
@@ -218,29 +243,6 @@ platform :android do
   end
 end
 ```
-
-<br/>
-
-## Generate a Personal Access Token (PAT)
-
-<center class="images borders">
-  <div><a href="/assets/posts/2025-02-02-code-signing-apple/pat_01.png" target="_blank"><img src="/assets/posts/2025-02-02-code-signing-apple/pat_01.png" alt="Generate New Token (Classic)" title="Generate New Token (Classic)" /></a><br/>1</div>&nbsp;&nbsp;
-  <div><a href="/assets/posts/2025-02-02-code-signing-apple/pat_02.png" target="_blank"><img src="/assets/posts/2025-02-02-code-signing-apple/pat_02.png" alt="Use repo score" title="Use repo score"/></a><br/>2</div>
-</center>
-
-We also need to generate a **Personal Access Token** for Github. 
-
-This will enables us to increment a build number after each build.
-
-1. Visit your [settings page](https://github.com/settings/tokens) and click on **Generate new token** and select **Generate new token (classic)**.
-
-2. We need all the **repo** scope enabled. Set **no expiration**. Click **Generate token** and save the value.
-
-### Save secrets
-
-Save this secret in the github repository for your project:
-
-- `GH_PAT`: The value of your newly generated token
 
 <br/>
 
