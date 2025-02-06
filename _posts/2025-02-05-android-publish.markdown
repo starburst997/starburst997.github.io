@@ -256,6 +256,7 @@ name: Build Android
 
 on: 
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   build:
