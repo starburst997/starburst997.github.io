@@ -289,6 +289,7 @@ jobs:
 ```
 
 #### keystore.yml ([original](https://github.com/starburst997/android-code-sign/blob/v1/.github/workflows/keystore.yml))
+{% raw %}
 ```yml
 name: Generate .keystore
 
@@ -327,6 +328,7 @@ jobs:
       state: ${{ inputs.state }}
       country: ${{ inputs.country }}
 ```
+{% endraw %}
 
 Notice that we need to specify the project's path, module and version.
 
