@@ -23,7 +23,7 @@ We need to install [fastlane](https://fastlane.tools/) locally on our machine, f
 
 Also you need to makes sure [Bundler](https://bundler.io/) is installed:
 
-```console
+```sh
 gem install bundler
 ```
 
@@ -39,7 +39,7 @@ Notice that we're using my fork of [joshdholtz/fastlane-plugin-github_action](ht
 
 Now run:
 
-```console
+```sh
 bundle install
 ```
 
