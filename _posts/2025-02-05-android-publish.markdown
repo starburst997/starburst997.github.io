@@ -135,7 +135,7 @@ For ease of use afterward, we'll save the keystore as **base64** and save it as 
 base64 .keystore
 ```
 
-I've also created a [Github Action](https://github.com/starburst997/android-code-sign/blob/v1/.github/workflows/keystore.yml) that you can run in this repository called: **Generate .keystore**. It will also generate the **base64** version available in the artifact (don't forget to **delete** the artifact afterward!). You need to set the secret: `ANDROID_KEYSTORE_PASS` and `ANDROID_KEYALIAS_PASS` first since there is no way to input password string in Github Action yet.
+I've also created a [Github Action](https://github.com/starburst997/keystore-gh-actions/blob/v1/.github/workflows/keystore.yml) that you can run in this repository called: **Generate .keystore**. It will also generate the **base64** version available in the artifact (don't forget to **delete** the artifact afterward!). You need to set the secret: `ANDROID_KEYSTORE_PASS` and `ANDROID_KEYALIAS_PASS` first since there is no way to input password string in Github Action yet.
 
 Either the PKCS12 or JKS variant will works.
 
