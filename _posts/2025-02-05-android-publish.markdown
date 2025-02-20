@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Code Signing for Android via Github Action"
+title:  "Code Signing for Android via Github Actions"
 date:   2025-02-05 18:00:00 -0400
 categories: post
 ---
 
 *(**TL;DR**: By using [fastlane supply](https://docs.fastlane.tools/actions/supply/) and [Github Action](https://github.com/features/actions) we can compile and publish an Android app automatically)*
 
-*(Part three of my series on code-signing / distributing apps, check [Part 2 on Apple](/post/2025/02/02/code-signing-apple.html))*
+*(Part three of my series on code-signing / distributing apps, check [Part 4 on Building Unity Game using Github Action](/post/2025/02/11/unity-github-actions.html))*
 
 <br/>
 
@@ -303,5 +303,13 @@ Makes sure your app has been **reviewed** by filling all the necessary steps in 
 The workflow will also automatically increment the build number and save it as a variable in the repository.
 
 I've also included a [release workflow](https://github.com/starburst997/android-code-sign/blob/main/.github/workflows/release.yml) as an example.
+
+<br/>
+
+Code-signing / distributing app series:
+- Part 1: [Code Signing for Windows as an Individual Developer](/post/2025/01/29/code-signing.html)
+- Part 2: [Code Signing for Apple without a mac](/post/2025/02/02/code-signing-apple.html)
+- Part 3: [Code Signing for Android via Github Actions](/post/2025/02/05/android-publish.html)
+- Part 4: [Build and publish your Unity Game using Github Actions](/post/2025/02/11/unity-github-actions.html)
 
 <br/>

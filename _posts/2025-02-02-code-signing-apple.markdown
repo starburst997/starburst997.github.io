@@ -7,7 +7,7 @@ categories: post
 
 *(**TL;DR**: By using [fastlane match](https://docs.fastlane.tools/actions/match/) and [Github Action](https://github.com/features/actions) we can compile and publish a code-signed iOS / macOS app without ever using a mac in person)*
 
-*(Part two of my series on code-signing / distributing apps, check [Part 1 on Windows](/post/2025/01/29/code-signing.html))*
+*(Part two of my series on code-signing / distributing apps, check [Part 3 on Android](/post/2025/02/05/android-publish.html))*
 
 <br/>
 
@@ -340,5 +340,13 @@ The macOS builds also includes an optional **.dmg** and **.app.zip** ready to be
 ## Conclusion
 
 You can now build and distribute an iOS or macOS app without owning a mac. Of course, you'll want one to properly develop and test your apps. However, in the age of cross-platform development, if your app runs well on one platform, it should works well on Apple's devices too and being able to build those on Github Action lower the barrier cost a lot. 
+
+<br/>
+
+Code-signing / distributing app series:
+- Part 1: [Code Signing for Windows as an Individual Developer](/post/2025/01/29/code-signing.html)
+- Part 2: [Code Signing for Apple without a mac](/post/2025/02/02/code-signing-apple.html)
+- Part 3: [Code Signing for Android via Github Actions](/post/2025/02/05/android-publish.html)
+- Part 4: [Build and publish your Unity Game using Github Actions](/post/2025/02/11/unity-github-actions.html)
 
 <br/>
