@@ -47,7 +47,7 @@ I suggests that you also add all of those secrets to a Password Manager. They ca
 
 ### Windows
 
-Optional code-signing for the EXE is available if you follow [this guide](https://github.com/starburst997/windows-code-sign).
+Optional code-signing for the EXE is available if you follow [this guide](/post/2025/01/29/code-signing.html).
 
 #### Windows Secrets
 
@@ -66,7 +66,7 @@ Optional code-signing for the EXE is available if you follow [this guide](https:
 
 ### macOS / iOS
 
-Allow publishing to the App Store / Testflight for your macOS and iOS version of your app. Also notarize / staple your macOS app for external distribution (.dmg). Follow [this guide](https://github.com/starburst997/apple-code-sign).
+Allow publishing to the App Store / Testflight for your macOS and iOS version of your app. Also notarize / staple your macOS app for external distribution (.dmg). Follow [this guide](/post/2025/02/02/code-signing-apple.html).
 
 #### Apple Secrets
 
@@ -92,7 +92,7 @@ Allow publishing to the App Store / Testflight for your macOS and iOS version of
 
 ### Android
 
-Code-signing and publishing to the Google Play Console, follow [this guide](https://github.com/starburst997/android-code-sign). The keystore can also be generated using an action, follow [this guide](https://github.com/starburst997/keystore-gh-actions).
+Code-signing and publishing to the Google Play Console, follow [this guide](/post/2025/02/05/android-publish.html). The keystore can also be generated using an action, follow [this guide](https://github.com/starburst997/keystore-gh-actions).
 
 #### Android Secrets
 
@@ -145,7 +145,7 @@ Optional notifications to a channel of your choice in Discord when a build is do
 
 ### Personal Access Token (PAT)
 
-We also need to generate a [Personal Access Token](https://github.com/settings/tokens) for Github. This will enable us to create Github Release and increment the build number variables for each platforms. Need all **repo** access. Follow [this guide](https://github.com/starburst997/apple-code-sign?tab=readme-ov-file#generate-a-personal-access-token-pat).
+We also need to generate a [Personal Access Token](https://github.com/settings/tokens) for Github. This will enable us to create Github Release and increment the build number variables for each platforms. Need all **repo** access. Follow [this guide](/post/2025/02/02/code-signing-apple.html#generate-a-personal-access-token-pat).
 
 #### Github Secrets
 
